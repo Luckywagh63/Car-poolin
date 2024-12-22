@@ -65,7 +65,7 @@ const BookDrivePage = () => {
 
   return (
     <main className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-8">Book a Drive with Lucky's Org</h1>
+      <h1 className="text-4xl font-bold mb-8">Book a Drive with Lucky&apos;s Org</h1>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4 w-full max-w-md">
         <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="p-2 border border-gray-300 rounded" required />
         <input type="number" name="passengers" min="1" max="6" placeholder="Number of Passengers" value={formData.passengers} onChange={handleChange} className="p-2 border border-gray-300 rounded" required />
