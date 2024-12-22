@@ -1,0 +1,10 @@
+{
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/login/page": "app/login/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/find-cab/page": "app/find-cab/page.js",
+  "/joined-ride/page": "app/joined-ride/page.js",
+  "/api/cabs/find/route": "app/api/cabs/find/route.js",
+  "/join-drive/page": "app/join-drive/page.js"
+}
