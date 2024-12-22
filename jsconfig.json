@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".", // This should be included
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["./components/*"] // Add this line for components folder
+    }
+  }
+}
