@@ -1,9 +1,8 @@
-// app/utils/withAuth.js
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const withAuth = (WrappedComponent) => {
-  return (props) => {
+  const AuthHOC = (props) => {
     const router = useRouter();
     const isAuthenticated = typeof window !== 'undefined' && localStorage.getItem('user'); // Check if user is logged in
 
@@ -15,6 +14,11 @@ const withAuth = (WrappedComponent) => {
 
     return isAuthenticated ? <WrappedComponent {...props} /> : null; // Render wrapped component only if authenticated
   };
+
+  // Set displayName for better debugging
+  AuthHOC.displayName = `withAuth(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
+
+  return AuthHOC;
 };
 
 export default withAuth;
